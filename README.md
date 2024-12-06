@@ -1,22 +1,25 @@
+# The Client - Website
+Ik ben Branco van Beek en ik doe de studie Front-end Design & Webdevelopment en ik heb gekozen voor het project Oncollaboration, dat is een ontwerp voor een online platform voor samenwerking en kennisdeling tussen Indoneschische en Nederlandse radiotherapeuten. Oncollaboration is het afstudeerwerk van oud-CMD student Sergio Eijben. Sergio is in opdracht van radiotherapeute Judi van Diessen van het Antoni van Leeuwenhoek ziekenhuis afgestudeerd op de vraag over hoe de samenwerking en kennisdeling tussen Indoneschische en Nederlandse radiotherapeuten te verbeteren. Onze opdracht is dan om op basis van het aangeleverde ontwerp het online platform Oncollabration te ontwikkelen. Ik heb gekozen om een website te maken voor het Antoni van Leeuwenhoek ziekenhuis in Amsterdam om kennis op het gebied van radiotherapie te delen met de Indonesische ziekenhuizen.
 
-Ontwerp en maak een interactieve website voor een opdrachtgever.
+## Inhoudsopgave Readme
 
-De instructie vind je in: [INSTRUCTIONS.md](https://github.com/fdnd-task/fix-the-flow-interactive-website/blob/main/docs/INSTRUCTIONS.md)
-
-# Titel
-<!-- Geef je project een titel en schrijf in één zin wat het is -->
+  * [Beschrijving](#beschrijving)
+  * [Kenmerken](#kenmerken)
+  * [Bronnen](#bronnen)
 
 ## Beschrijving
-<!-- In de Beschrijving staat hoe je project er uit ziet, hoe het werkt en wat je er mee kan. -->
-<!-- Voeg een mooie poster visual toe 📸 -->
-<!-- Voeg een link toe naar Github Pages 🌐-->
+
+<a href="https://brancovanbeek.github.io/the-client-website/">Mijn website</a>
+
+<img src="IMG/mobile-oncolab.png">
+<img src="IMG/header-oncolab.png">
+<img src="IMG/footer-oncolab.png">
+
+
 
 ## Kenmerken
-<!-- Bij Kenmerken staat welke technieken zijn gebruikt en hoe. Wat is de HTML structuur? Wat zijn de belangrijkste dingen in CSS? Wat is er met JS gedaan en hoe? -->
+<!-- Bij Kenmerken staat welke technieken zijn gebruikt en hoe. Wat is de HTML structuur? Wat zijn de belangrijkste dingen in CSS? Wat is er met Javascript gedaan en hoe? Misschien heb je een framwork of library gebruikt? -->
 
-## Bronnen
 
-## Licentie
 
-This project is licensed under the terms of the [MIT license](./LICENSE).
 
