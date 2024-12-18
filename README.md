@@ -22,6 +22,77 @@ Ontwerpkeuzes:
 1. Design + wireframe
 <img width="400" alt="Scherm­afbeelding 2024-12-06 om 10 03 16" src="https://github.com/user-attachments/assets/0808bbb6-110a-4872-997a-ea75d4c8b4af">
 
+## Kenmerken
+
+### HTML Structuur
+De HTML bestaat uit een <dialog> element voor het modale venster, met twee secties: één voor login en één voor registratie. Beide secties bevatten een formulier met invoervelden, knoppen en links om tussen de formulieren te schakelen.
+
+<!-- Login Modal -->
+<dialog id="sign-in-dialog">
+  <button id="close-dialog">&times;</button>
+  <form>
+    <h2>Sign In</h2>
+    <input type="email" placeholder="Email">
+    <input type="password" placeholder="Password">
+    <button type="submit">Log In</button>
+    <div class="divider"><span>or</span></div>
+    <button id="google-signin">Sign in with Google</button>
+    <p>
+      <span>Don't have an account?</span>
+      <a href="#" id="signup-link">Sign Up</a>
+    </p>
+  </form>
+</dialog>
+
+<!-- Sign Up Modal -->
+<dialog id="sign-up-dialog">
+  <button id="close-dialog-signup">&times;</button>
+  <form>
+    <h2>Sign Up</h2>
+    <input type="email" placeholder="Email">
+    <input type="password" placeholder="Password">
+    <input type="password" placeholder="Confirm Password">
+    <button type="submit">Sign Up</button>
+    <div class="divider"><span>or</span></div>
+    <button id="google-signin">Sign up with Google</button>
+    <p>
+      <span>Already have an account?</span>
+      <a href="#" id="signin-link">Sign In</a>
+    </p>
+  </form>
+</dialog>
+
+### JavaScript
+JavaScript regelt de interactiviteit, zoals het openen en sluiten van de modale vensters en het wisselen tussen de login- en registratieformulieren.
+
+Voorbeeld van de JavaScript voor het openen en sluiten van beide dialoogvensters:
+
+// Open login dialog
+const loginButton = document.getElementById('login');
+const signInDialog = document.getElementById('sign-in-dialog');
+const closeDialogButton = document.getElementById('close-dialog');
+
+loginButton.addEventListener('click', () => {
+  signInDialog.showModal();
+});
+
+// Open sign-up dialog
+const signUpLink = document.getElementById('signup-link');
+const signUpDialog = document.getElementById('sign-up-dialog');
+const closeDialogSignupButton = document.getElementById('close-dialog-signup');
+
+signUpLink.addEventListener('click', () => {
+  signUpDialog.showModal();
+});
+
+// Sluit de modale vensters
+closeDialogButton.addEventListener('click', () => {
+  signInDialog.close();
+});
+
+closeDialogSignupButton.addEventListener('click', () => {
+  signUpDialog.close();
+});
 
 
 
