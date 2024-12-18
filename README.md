@@ -27,6 +27,7 @@ Ontwerpkeuzes:
 ### HTML Structuur
 De HTML bestaat uit een <dialog> element voor het modale venster, met twee secties: één voor login en één voor registratie. Beide secties bevatten een formulier met invoervelden, knoppen en links om tussen de formulieren te schakelen.
 
+```
 <!-- Login Modal -->
 <dialog id="sign-in-dialog">
   <button id="close-dialog">&times;</button>
@@ -61,41 +62,50 @@ De HTML bestaat uit een <dialog> element voor het modale venster, met twee secti
     </p>
   </form>
 </dialog>
+```
 
 ### JavaScript
 JavaScript regelt de interactiviteit, zoals het openen en sluiten van de modale vensters en het wisselen tussen de login- en registratieformulieren.
 
-Voorbeeld van de JavaScript voor het openen en sluiten van beide dialoogvensters:
+Voorbeeld van de JavaScript voor het openen en sluiten van beide dialoogvensters en het schakelen tussen login en sign-up:
 
-// Open login dialog
+```
+//DIALOOG SLUITEN//
 const loginButton = document.getElementById('login');
 const signInDialog = document.getElementById('sign-in-dialog');
 const closeDialogButton = document.getElementById('close-dialog');
-
+  
+//Open dialog bij knopklik//
 loginButton.addEventListener('click', () => {
-  signInDialog.showModal();
+    signInDialog.showModal();
 });
-
-// Open sign-up dialog
-const signUpLink = document.getElementById('signup-link');
-const signUpDialog = document.getElementById('sign-up-dialog');
-const closeDialogSignupButton = document.getElementById('close-dialog-signup');
-
-signUpLink.addEventListener('click', () => {
-  signUpDialog.showModal();
-});
-
-// Sluit de modale vensters
+  
+//Sluit dialog bij klik op de sluitknop//
 closeDialogButton.addEventListener('click', () => {
-  signInDialog.close();
-});
-
-closeDialogSignupButton.addEventListener('click', () => {
-  signUpDialog.close();
+    signInDialog.close();
 });
 
 
+//VERANDEREN VAN DE FORM//
+// Selecteer elementen
+const signInSection = document.querySelector('.sign-in');
+const signUpSection = document.querySelector('.sign-up');
+const signUpLink = document.querySelector('#signup-link');
+const signInLink = document.querySelector('#signin-link');
 
+// Functie om secties te wisselen
+function toggleSections(showSection, hideSection) {
+    showSection.classList.add('active');
+    hideSection.classList.remove('active');
+}
 
+// Event listeners
+signUpLink.addEventListener('click', () => {
+    toggleSections(signUpSection, signInSection); // Toon Sign-Up
+});
+
+signInLink.addEventListener('click', () => {
+    toggleSections(signInSection, signUpSection); // Toon Sign-In
+});
 
 
