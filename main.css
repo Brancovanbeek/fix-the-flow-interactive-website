@@ -506,7 +506,6 @@ h2{
         scroll-snap-type: mandatory;
         gap: 1em;
         margin-top: 2em;
-        /* position: relative; */
     }
 
     
@@ -630,7 +629,12 @@ h2{
 
 /* loginpage */
 .login{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100svh;
     background-color: var(--lightred);
+    padding: 8rem 1rem 3rem;
 }
 
 .login-home-section > h1{
@@ -652,7 +656,7 @@ h2{
 .login-home-section{
     display: flex;
     justify-content: center;
-    margin-top: 8em;
+    /* margin-top: 8em; */
     /* position: absolute; */
 }
 
@@ -662,7 +666,7 @@ h2{
     align-items: center;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 25em;
+    /* margin-top: 50dvh; */
     width: 340px;
     height: 50px;
     border-radius: 5px;
@@ -673,25 +677,31 @@ h2{
     font-weight: var(--bold);
     font-size: 16px;
     cursor: pointer; 
+    /* position: fixed; */
+    bottom: 40px;
 }
 
 .login-home-btn:hover{
     background-color: var(--accentred);
 
 }
-    
 
 dialog {
     border: none;
     border-radius: 10px 10px 0 0;
     padding: 20px;
-    width: 100%;
-    max-width: 400px;
+    max-width: 700px;
+    width: 85%;
     position: fixed;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: 0;
 }
 
 dialog::backdrop {
     background: rgba(115, 114, 114, 0.558);
+    filter: blur(100px);
     transition: opacity 0.3s ease;
 }
 
@@ -699,12 +709,23 @@ dialog::backdrop {
 form {
     display: flex;
     flex-direction: column;
+    font-family: var(--open-sans);
+    font-size: 15px;
+}
+
+form > h2{
+    margin-bottom: 1em;
+    color: var(--darkred);
+    font-size: 25px;
 }
 
 input {
     margin-bottom: 15px;
     padding: 10px;
     font-size: 1rem;
+    margin-top: 0.2em;
+    border: solid #d9d9d99d 2px;
+    border-radius: 5px;
 }
 
 button[type="submit"], #google-signin {
@@ -712,14 +733,30 @@ button[type="submit"], #google-signin {
     color: var(--white);
     border: none;
     padding: 10px;
-    margin-bottom: 10px;
     cursor: pointer;
     border-radius: 5px;
+    font-weight: 100;
+    font-size: 15px;
+}
+
+button[type="submit"]:hover{
+    background-color: var(--accentred);
+}
+
+#google-signin{
+    background-color: var(--white);
+    color: var(--black);
+    border: solid var(--black) 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5em;
+
 }
 
 #close-dialog {
     position: absolute;
-    top: 10px;
+    top: 5px;
     right: 10px;
     background: none;
     border: none;
@@ -727,6 +764,68 @@ button[type="submit"], #google-signin {
     cursor: pointer;
 }
 
-#sign-in-dialog{
-  
+#signup-link, #signin-link{
+    color: black !important; /* Zwarte tekst */
+    text-decoration: underline;
+    cursor: pointer;
 }
+/* input:has(:user-invalid) {
+    background: #faa;
+} */
+
+form > p{
+    display: flex;
+    justify-content: center;
+    gap: 0.5em;
+    
+}
+
+dialog[open] {
+    animation: fadein 0.5s ease-in forwards;
+
+}
+  @keyframes fadein{
+    0%{
+      opacity:0;
+      transform: translateY(100%);
+    }
+    100%{
+      opacity:1;
+      transform: translateY(0);
+    }
+}
+
+.divider {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin: 10px 0;
+    color: gray;
+}
+  
+.divider::before,
+.divider::after {
+    content: "";
+    flex: 1;
+    border-bottom: 1px solid lightgray;
+    margin: 0 10px;
+}
+  
+.divider span {
+    font-size: 14px;
+    color: gray;
+}
+  
+.sign-up,
+.sign-in {
+    display: none; 
+}
+
+.active {
+    display: block; 
+}
+/* 
+.button-grid{
+    grid-template-columns: 1fr, 1fr;
+
+} */
