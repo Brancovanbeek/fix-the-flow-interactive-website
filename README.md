@@ -5,6 +5,8 @@ Ik ben Branco van Beek en ik doe de studie Front-end Design & Webdevelopment en 
 
 Dit project is een login- en registratiepagina voor Oncollaboration die een interactieve en gebruiksvriendelijke ervaring biedt. Het biedt de mogelijkheid om gebruikers zich in te laten loggen of zich te registreren via een modal dialoogvenster, die toegankelijk is via een knop op de homepage. Gebruikers kunnen tussen de login en registratie formulieren schakelen zonder de pagina opnieuw te laden, wat de gebruikerservaring verbetert en zorgt voor een naadloze interface.
 
+<img src="CPT2412181158-426x703.gif" >
+
 ## Interacties
 1. Login Modal: Wanneer de gebruiker op de Login knop klikt, opent er een modal venster met een formulier voor inloggen. Het venster kan worden gesloten door op de sluitknop te klikken.
 2. Schakelen tussen Login en Registratie: In de modal kunnen gebruikers schakelen tussen het loginformulier en het registratieformulier via links, zonder de pagina opnieuw te laden.
@@ -20,7 +22,7 @@ Ontwerpkeuzes:
 1. Design + wireframe
 <img width="400" alt="Scherm­afbeelding 2024-12-06 om 10 03 16" src="https://github.com/user-attachments/assets/0808bbb6-110a-4872-997a-ea75d4c8b4af">
 
-<img src="CPT2412181158-426x703.gif" >
+
 
 
 
